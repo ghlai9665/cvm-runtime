@@ -13,7 +13,7 @@ import numpy as np
 
 import mxnet as mx
 from mxnet import gluon, ndarray as nd
-import cvm
+# import cvm
 
 # import as registry pattern
 import tfm_ops  # pylint: disable=unused-import

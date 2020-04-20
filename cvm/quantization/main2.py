@@ -237,6 +237,16 @@ if __name__ == "__main__":
             _checkpoint_exist(sec, sym_top_file, prm_top_file)
             top = Model.load(sym_top_file, prm_top_file)
         logger.info("`%s` stage checkd" % sec)
+    # import tfm_pass as tpass
+    # import sym_utils as sutils
+    # op_names = tpass.collect_op_names(mrt.current_model.symbol, mrt.current_model.params)
+    # with open("/home/selim/data/ryt.txt", "w") as f:
+        # # for op_name in op_names:
+            # # f.write("  _OP_"+op_name+",\n")
+        # for op in sutils.topo_sort(mrt.current_model.symbol, mrt.current_model.params):
+            # if op.attr('op_name') == 'Convolution':
+                # f.write("  "+op.attr('name')+",\n")
+    # exit()
 
     # quantization
     sec = 'QUANTIZATION'

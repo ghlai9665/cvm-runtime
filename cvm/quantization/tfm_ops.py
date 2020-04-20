@@ -4,7 +4,7 @@ import numpy as np
 
 from mxnet import ndarray as nd
 import mxnet as mx
-import cvm
+# import cvm
 
 from tfm_utils import get_bit, get_range, scale, get_bit_cnt, \
                       requant, requant_operator, requant_parameter, \
@@ -138,7 +138,7 @@ class MulScalar(Transformer):
 @register_pass("validate")
 @register_pass("calculate_ops")
 @register_pass("fuse_transpose")
-# @register_pass("prepare_for_compile") # only for restore
+@register_pass("prepare_for_compile") # only for restore
 @register_transformer("_div_scalar")
 class DivScalar(Transformer):
     def rewrite(self, op, **kwargs):
@@ -619,7 +619,7 @@ class FullyConnected(Transformer):
 @register_pass("validate")
 @register_pass("rewrite")
 @register_pass("fuse_transpose")
-# @register_pass("prepare_for_compile") # only for restore
+@register_pass("prepare_for_compile") # only for restore
 @register_transformer("sigmoid")
 class Sigmoid(Transformer):
     def quantize(self, op, **kwargs):
@@ -630,7 +630,7 @@ class Sigmoid(Transformer):
 @register_pass("validate")
 @register_pass("rewrite")
 @register_pass("fuse_transpose")
-# @register_pass("prepare_for_compile") # only for restore
+@register_pass("prepare_for_compile") # only for restore
 @register_transformer("exp")
 class Exp(Transformer):
     def quantize(self, op, **kwargs):
@@ -640,7 +640,7 @@ class Exp(Transformer):
 @register_pass("validate")
 @register_pass("rewrite")
 @register_pass("fuse_transpose")
-# @register_pass("prepare_for_compile") # only for restore
+@register_pass("prepare_for_compile") # only for restore
 @register_transformer("softmax")
 class Softmax(Transformer):
     def calculate_ops(self, op, **kwargs):
@@ -1582,6 +1582,7 @@ class Squeeze(Transformer):
 
 @register_pass("fuse_transpose")
 @register_pass("rewrite")
+@register_pass("prepare_for_compile")
 @register_transformer("L2Normalization")
 class L2Normalization(Transformer):
     def quantize(self, op, **kwargs):

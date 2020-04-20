@@ -2,7 +2,7 @@ from mxnet.symbol import _internal
 from mxnet import symbol as _sym
 from mxnet import ndarray as nd
 import mxnet as mx
-import cvm
+# import cvm
 import logging
 import json
 import math
