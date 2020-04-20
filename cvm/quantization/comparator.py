@@ -95,12 +95,13 @@ def calculate_norm(x, y):
     ny = nd.norm(y)
     nr = nd.norm(res)
     print("saving...")
-    f = "/home/ryt/data/cmp_"
+    f = "/home/selim/data/cmp_"
     names = ["nx", "ny", "nr"]
     objs = [nx, ny, nr]
     for obj in objs:
         print(type(obj), obj.shape)
     for i in range(3):
+        print(i)
         nd.save(f+names[i], objs[i])
     print('success')
 
