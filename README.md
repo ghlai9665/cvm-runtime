@@ -10,10 +10,8 @@ model|  Jetson Nano \- Cortex\-A57(s) | Intel E5\-2650(s) |  Jetson Nano \- GPU(
 yolo_tfm | | | 1.076 | 0.043
 resnet50_mxg | 1.2076| 0.3807| 0.147 | 0.009
 resnet18_v1 | |  | 0.055 | 0.004
-qd10_resnet20_v2 ||  | 0.064 | 0.010
 resnet50_v2 |1.4674| 0.5005 | 0.185 | 0.010
 qd10_resnet20_v2|0.2944|0.1605 | 0.065 | 0.012
-trec | 0.0075| 0.0028 | 0.002 | 0.001
 dcnet_mnist_v1|0.0062|0.0057 | 0.002 | 0.001
 mobilenetv1.0_imagenet|0.3508| 0.1483| 0.039  | 0.002
 resnet50_v1_imagenet|1.2453| 0.3429 | 0.150 | 0.009
