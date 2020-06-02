@@ -1,3 +1,4 @@
-mxnet-cu92mkl
+numpy
+mxnet
 gluoncv
 decorator
